@@ -8,8 +8,24 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+const getFilename = () => {
+  try {
+    return __filename;
+  } catch {
+    return fileURLToPath(import.meta.url || "file://" + process.cwd());
+  }
+};
+
+const getDirname = () => {
+  try {
+    return __dirname;
+  } catch {
+    return path.dirname(getFilename());
+  }
+};
+
+const resolvedFilename = getFilename();
+const resolvedDirname = getDirname();
 
 // Shared files in-memory store (expires after 15 minutes)
 interface SharedFile {
