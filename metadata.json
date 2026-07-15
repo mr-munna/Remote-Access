@@ -1,0 +1,6 @@
+{
+  "name": "Remote PC File Access & Manager",
+  "description": "রিমোটলি আপনার কম্পিউটার বা ল্যাপটপের ফাইলগুলো ফোন বা অন্য ডিভাইস থেকে ব্রাউজ, এডিট, কপি, মুভ এবং শেয়ার করার চমৎকার মাধ্যম। Access, edit, copy, move, and share your PC files from your phone from anywhere.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
